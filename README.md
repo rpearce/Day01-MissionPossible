@@ -17,6 +17,8 @@ MINIMUM requirements for this assignment:
 
 > {your name}, your mission, should you choose to accept it, is to enter the vault. Once inside, there are 3 security systems in operation. Disable each system in order from left to right in order to save the world. This message will self destruct in 15 seconds. Good luck, {your name}!
 
+* When your homework is done, be sure to Commit it & Push it back to GitHub. It is NOT complete or turned in until it is back on GitHub.
+
 OPTIONAL requirements for this assignment:
 * Change the font, and text color of the Button in InterfaceBuilder
 * Make the TextView uneditable
