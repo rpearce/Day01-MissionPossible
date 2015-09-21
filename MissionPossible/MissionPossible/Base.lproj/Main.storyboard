@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,25 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-pi-0NJ">
-                                <rect key="frame" x="62" y="78" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-pi-0NJ">
+                                <rect key="frame" x="40" y="70" width="520" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="47F-tj-X28"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="l5e-UJ-eVz"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfg-VI-FAq">
-                                <rect key="frame" x="39" y="161" width="143" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfg-VI-FAq">
+                                <rect key="frame" x="228" y="150" width="143" height="65"/>
                                 <animations/>
-                                <state key="normal" title="View Mission"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="8mo-N3-TJf"/>
+                                    <constraint firstAttribute="width" constant="143" id="US4-Cn-J1Z"/>
+                                </constraints>
+                                <state key="normal" title="View Mission">
+                                    <color key="titleColor" red="0.97925581172615594" green="0.20962944897116653" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="viewMissionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50Q-k4-cZN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GrE-BV-RCW">
-                                <rect key="frame" x="20" y="265" width="240" height="282"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GrE-BV-RCW">
+                                <rect key="frame" x="40" y="255" width="520" height="337"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -42,6 +52,17 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GrE-BV-RCW" secondAttribute="bottom" constant="8" id="8BM-J9-J77"/>
+                            <constraint firstItem="Dfg-VI-FAq" firstAttribute="top" secondItem="HEF-pi-0NJ" secondAttribute="bottom" constant="50" id="EWs-67-Gx7"/>
+                            <constraint firstItem="GrE-BV-RCW" firstAttribute="top" secondItem="Dfg-VI-FAq" secondAttribute="bottom" constant="40" id="RUE-Ce-uIq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HEF-pi-0NJ" secondAttribute="trailing" constant="20" id="dmh-SC-dvH"/>
+                            <constraint firstItem="GrE-BV-RCW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="owe-S7-VXh"/>
+                            <constraint firstItem="Dfg-VI-FAq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgw-IN-O9d"/>
+                            <constraint firstItem="HEF-pi-0NJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="uJj-NY-L8w"/>
+                            <constraint firstItem="HEF-pi-0NJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zSh-FJ-Ul1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GrE-BV-RCW" secondAttribute="trailing" constant="20" id="zz0-qX-WUd"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="missionTextView" destination="GrE-BV-RCW" id="BaT-xn-3GP"/>
