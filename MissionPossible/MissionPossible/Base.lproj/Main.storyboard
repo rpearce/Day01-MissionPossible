@@ -43,7 +43,7 @@
                                     <action selector="viewMissionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50Q-k4-cZN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GrE-BV-RCW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GrE-BV-RCW">
                                 <rect key="frame" x="40" y="255" width="520" height="337"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
